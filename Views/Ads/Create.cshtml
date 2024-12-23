@@ -1,0 +1,87 @@
+﻿@model Ad
+
+<div class="sub-page">
+    <h2 style="padding-left:20px">Create Advertisement</h2>
+    <form id="form" asp-controller="Ads" asp-action="Create">
+        <fieldset class="fieldset">
+            <div class="field">
+                <label asp-for="Title"></label>
+                <input type="text" asp-for="Title" placeholder="Title" onFocus="this.placeholder=''" onBlur="this.placeholder='Title'" />
+                <span asp-validation-for="Title" class="Error-message"></span>
+            </div>
+
+            <div class="field">
+                <label asp-for="Description"></label>
+                <input type="text" asp-for="Description" placeholder="Description" onFocus="this.placeholder=''" onBlur="this.placeholder='Description'" />
+                <span asp-validation-for="Description" class="Error-message"></span>
+            </div>
+
+            <div class="field">
+                <label asp-for="Price"></label>
+                <input type="number" asp-for="Price" placeholder="Price" onFocus="this.placeholder=''" onBlur="this.placeholder='Price'" />
+                <span asp-validation-for="Price" class="Error-message"></span>
+            </div>
+
+            <div class="field">
+                <label asp-for="Condition"></label>
+                <input type="text" asp-for="Condition" placeholder="Condition" onFocus="this.placeholder=''" onBlur="this.placeholder='Condition'" />
+                <span asp-validation-for="Condition" class="Error-message"></span>
+            </div>
+
+            <div class="field">
+                <label asp-for="Model"></label>
+                <input type="text" asp-for="Model" placeholder="Model" onFocus="this.placeholder=''" onBlur="this.placeholder='Model'" />
+                <span asp-validation-for="Model" class="Error-message"></span>
+            </div>
+
+            <div class="field">
+                <label asp-for="Category"></label>
+                <input type="text" asp-for="Category" placeholder="Category" onFocus="this.placeholder=''" onBlur="this.placeholder='Category'" />
+                <span asp-validation-for="Category" class="Error-message"></span>
+            </div>
+
+
+            <div class="field">
+                <label asp-for="FuelType"></label>
+                <input type="text" asp-for="FuelType" placeholder="FuelType" onFocus="this.placeholder=''" onBlur="this.placeholder='FuelType'" />
+                <span asp-validation-for="FuelType" class="Error-message"></span>
+            </div>
+
+            <div class="field">
+                <label asp-for="Type"></label>
+                <input type="text" asp-for="Type" placeholder="Type" onFocus="this.placeholder=''" onBlur="this.placeholder='Type'" />
+                <span asp-validation-for="Type" class="Error-message"></span>
+            </div>
+
+
+            <div class="field">
+                <label asp-for="Motor"></label>
+                <input type="text" asp-for="Motor" placeholder="Motor" onFocus="this.placeholder=''" onBlur="this.placeholder='Motor'" />
+                <span asp-validation-for="Motor" class="Error-message"></span>
+            </div>
+
+            <div class="field">
+                <label asp-for="Year"></label>
+                <input type="number" asp-for="Year" placeholder="Year" onFocus="this.placeholder=''" onBlur="this.placeholder='Year'" />
+                <span asp-validation-for="Year" class="Error-message"></span>
+            </div>
+
+            <div class="field">
+                <label asp-for="Color"></label>
+                <input type="text" asp-for="Color" placeholder="Color" onFocus="this.placeholder=''" onBlur="this.placeholder='Color'" />
+                <span asp-validation-for="Color" class="Error-message"></span>
+            </div>
+
+            <div class="field">
+                <label asp-for="Photo1"></label>
+                <input type="text" asp-for="Photo1" placeholder="Photo" onFocus="this.placeholder=''" onBlur="this.placeholder='Photo'" />
+                <span asp-validation-for="Photo1" class="Error-message"></span>
+            </div>
+
+            <div class="btns-forms">
+                <a asp-controller="Ads" asp-action="Index" class="button">Cancel</a>
+                <button type="submit" class="button" >Create</button>
+            </div>
+        </fieldset>
+    </form>
+</div>

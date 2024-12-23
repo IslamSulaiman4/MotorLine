@@ -117,7 +117,12 @@ ul.menu li a:hover , ul.menu li.current a {color:#0fc6ee; text-shadow:#68dcf6 0 
 .box-3 h2 {margin-bottom:16px;}
 .box-3 .wrap ul.list-1 {float:left; width:190px; margin-right:40px;}
 .box-3>a {margin-top:25px;}
-.sub-page {background:#e2e2e4; overflow:hidden;}
+.sub-page {
+	background: #e2e2e4;
+	overflow: hidden;
+	padding-bottom: 25px;
+	padding-top: 20px;
+}
 .sub-page-left {border:#fff 1px solid; border-bottom:none; float:left; width:610px; padding:29px 39px 0px 39px;}
 .sub-page-right {background:#1c1c1c; float:right; width:190px; padding:30px 40px 40px 40px; color:#9f9fa6;}
 .sub-page-right h2 {color:#e2e2e4;}
@@ -154,9 +159,12 @@ dl.adr dd span { width:70px; display:block; float:left;}
 dl.adr dd {white-space:nowrap;}
 dl.adr dd a {}
 dl.adr dd a:hover {}
-#form { margin: 13px 0 0px 0px; width:610px; }
-#form input {border:#fff 1px solid; background:#fff; font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#000; text-transform:uppercase; padding:7px 10px 7px 18px;outline: medium none;width: 580px; height:14px; float:left;}
+/*
+#form { margin-top:13px;  width:100% }
+#form input {border:#fff 1px solid;display:block; background:#fff; font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#000; text-transform:uppercase; padding:7px 10px 7px 18px;outline: medium none;width: 580px; height:14px; }
 #form textarea {border:#fff 1px solid; background:#fff; font-size:11px; font-family:Arial, Helvetica, sans-serif; color:#000; text-transform:uppercase; height:173px;outline: medium none;overflow: auto; padding: 7px 0px 0px 18px;width:590px;resize:none;margin:0px 0 0 0;float:left;}
-#form label {position:relative;display: block; min-height:35px; overflow:hidden;}
+#form label {position:relative;display: block; min-height:35px; overflow:hidden; font-weight:bold; }
+*/
+
 .btns {text-align:right; overflow:hidden; width:610px; padding-top:10px; }
 .btns a {display:inline-block; margin-left:10px;}
