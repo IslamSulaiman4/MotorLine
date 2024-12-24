@@ -3,6 +3,7 @@ using System;
 using EntityFrameworkCore.Jet.Metadata;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MotorLine.Data;
 
@@ -11,9 +12,11 @@ using MotorLine.Data;
 namespace MotorLine.Migrations
 {
     [DbContext(typeof(AdsDbContext))]
-    partial class AdsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20241224172048_ChangeTitleToUnique")]
+    partial class ChangeTitleToUnique
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -57,3 +57,24 @@
 .Error-message{
     color:red;
 }
+a.actions-btns {
+    background: #353535;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 25px;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Open Sans Condensed', sans-serif;
+    border: 1px solid transparent;
+    padding: 1px 12px;
+    margin-right: 10px;
+}
+}
+a.actions-btns:hover {
+    background: #000;
+}
+
+a.actions-btns.delete:hover {
+    background-color: darkred;
+}
+

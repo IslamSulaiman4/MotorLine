@@ -1,4 +1,5 @@
-﻿@model List<MotorLine.Models.Ad>
+﻿@model List<MotorLine.ViewModel.AdsShowVM>
+
 
 
 
@@ -14,11 +15,14 @@
         @foreach (var item in @Model)
         {
             <div class="box-6 top-2">
-                <img src="@item.Photo1" alt="Basic car image" class="img-indent-2">
+                    <img src="~/imgs/@item.Photo1" alt="Basic car image" style="width:270px;height:187px" class="img-indent-2" />
                 <div class="extra-wrap">
                     <p class="text-2">@item.Title</p>
-                    <a href="https://www.free-css.com/free-css-templates" class="link">View All Details</a>
                     <p class="upper">@item.Description</p>
+
+                        <a asp-controller="Ads" asp-action="Details" asp-route-id="@item.AdID" class="actions-btns">View All Details</a>
+                        <a asp-controller="Ads" asp-action="Edit" asp-route-id="@item.AdID" class="actions-btns">Edit</a>
+                        <a asp-controller="Ads" asp-action="Delete" asp-route-id="@item.AdID" class="actions-btns delete">Delete</a>
                 </div>
             </div>
         }

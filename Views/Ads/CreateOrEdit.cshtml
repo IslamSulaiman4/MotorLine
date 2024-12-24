@@ -1,9 +1,14 @@
-﻿@model Ad
+﻿@using MotorLine.ViewModel
+@model AdVM
 
 <div class="sub-page">
-    <h2 style="padding-left:20px">Create Advertisement</h2>
-    <form id="form" asp-controller="Ads" asp-action="Create">
+    <h2 style="padding-left:20px">@(@Model.AdID == 0 ? "Create Advertisement" : "Edit Advertisement")</h2>
+
+    <form id="form" method="post" enctype="multipart/form-data" asp-action="@(Model.AdID == 0 ? "Create" : "Edit")" asp-controller="Ads">
         <fieldset class="fieldset">
+            <!-- Hidden field to store AdID -->
+            <input type="hidden" asp-for="AdID" />
+
             <div class="field">
                 <label asp-for="Title"></label>
                 <input type="text" asp-for="Title" placeholder="Title" onFocus="this.placeholder=''" onBlur="this.placeholder='Title'" />
@@ -40,7 +45,6 @@
                 <span asp-validation-for="Category" class="Error-message"></span>
             </div>
 
-
             <div class="field">
                 <label asp-for="FuelType"></label>
                 <input type="text" asp-for="FuelType" placeholder="FuelType" onFocus="this.placeholder=''" onBlur="this.placeholder='FuelType'" />
@@ -52,7 +56,6 @@
                 <input type="text" asp-for="Type" placeholder="Type" onFocus="this.placeholder=''" onBlur="this.placeholder='Type'" />
                 <span asp-validation-for="Type" class="Error-message"></span>
             </div>
-
 
             <div class="field">
                 <label asp-for="Motor"></label>
@@ -74,13 +77,34 @@
 
             <div class="field">
                 <label asp-for="Photo1"></label>
-                <input type="text" asp-for="Photo1" placeholder="Photo" onFocus="this.placeholder=''" onBlur="this.placeholder='Photo'" />
+                <input type="file" asp-for="Photo1" placeholder="Photo" onFocus="this.placeholder=''" onBlur="this.placeholder='Photo'" />
                 <span asp-validation-for="Photo1" class="Error-message"></span>
+            </div>
+            <div class="field">
+                <label asp-for="Photo2"></label>
+                <input type="file" asp-for="Photo2" placeholder="Photo" onFocus="this.placeholder=''" onBlur="this.placeholder='Photo'" />
+                <span asp-validation-for="Photo2" class="Error-message"></span>
+            </div>
+                        <div class="field">
+                <label asp-for="Photo3"></label>
+                <input type="file" asp-for="Photo3" placeholder="Photo" onFocus="this.placeholder=''" onBlur="this.placeholder='Photo'" />
+                <span asp-validation-for="Photo3" class="Error-message"></span>
+            </div>
+                        <div class="field">
+                <label asp-for="Photo4"></label>
+                <input type="file" asp-for="Photo4" placeholder="Photo" onFocus="this.placeholder=''" onBlur="this.placeholder='Photo'" />
+                <span asp-validation-for="Photo4" class="Error-message"></span>
+            </div>
+            <div class="field">
+                <label asp-for="Photo4"></label>
+                <input type="file" asp-for="Photo4" placeholder="Photo" onFocus="this.placeholder=''" onBlur="this.placeholder='Photo'" />
+                <span asp-validation-for="Photo4" class="Error-message"></span>
             </div>
 
             <div class="btns-forms">
                 <a asp-controller="Ads" asp-action="Index" class="button">Cancel</a>
-                <button type="submit" class="button" >Create</button>
+                    <button type="submit" class="button">@(@Model.AdID == 0 ? "Create" : "Save Changes")</button>
+
             </div>
         </fieldset>
     </form>
